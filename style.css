@@ -35,19 +35,13 @@ img {
   font-size: 1.5em;
 }
 
-#header ul {
-  display: inline-block;
-  display: flex;
-}
-
-#header ul > li {
-  display: inline-block;
-  margin: 25px;
-  text-transform: uppercase;
-}
-
 #header a {
-  color: inherit;
+  color: white;
+}
+
+#header li{
+  line-height: 180%;
+  list-style-type: none;
 }
 
 /*Horizontal bar at the bottom*/
@@ -166,6 +160,17 @@ img {
 
   .dish {
     flex: 1;
+  }
+
+  #header ul {
+    display: inline-block;
+    display: flex;
+  }
+  
+  #header ul > li {
+    display: inline-block;
+    margin: 25px;
+    text-transform: uppercase;
   }
 
   #menumap {
