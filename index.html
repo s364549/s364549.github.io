@@ -1,19 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Petunia</title>
+  <title>Home</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark");
+    }
+</script>
 </head>
 
 
 <body>
   <header id="header">
+    <div class="mode">        
+      <button class="change" onclick="myFunction()">Toggle darkmode</button>
+  </div>
     <nav>
       <ul class="nav">
-        <li><a href="index.html">Petunia</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="menu.html">Menu</a> </li>
         <li><a href="aboutus.html">About us</a></li>
       </ul>
@@ -22,12 +31,13 @@
 
   
   <div class="front" id="facade">
-    <h1> RESTAURANT PETUNIA</h1>
+    <h1>Restaurant Petunia</h1>
     <figure>
-      <img src="images/facade.jpg" alt="Restaurant front" />
-      <figcaption>Depicted: Our wooden restaurant facade</figcaption>
+      <img src="images/facade.jpg" alt="restaurant petunia facade" />
+      <figcaption> &lrm; Depicted is Restaurant Petunia's wooden facade with its tall, outward-facing retractable glass walls wide open.</figcaption>
     </figure>
   </div>
+
   <footer id="footer">
     <ul class="nav">
       <li>Weekdays 16-22 (18-24)</li>

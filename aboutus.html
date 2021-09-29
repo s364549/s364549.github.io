@@ -1,18 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark");
+    }
+</script>
 </head>
 
 <body>
   <header id="header">
+    <div class="mode">        
+      <button class="change" onclick="myFunction()">Toggle darkmode</button>
+  </div>
     <nav>
     <ul class="nav">
-      <li><a href="index.html">Petunia</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="menu.html">Menu</a> </li>
       <li><a href="aboutus.html">About us</a></li>
     </ul>
@@ -21,13 +30,14 @@
 
     <h1>About us</h1>
     <div class="info" id="infotext">
+      <hr>
       <p>
-        To ensure universal accessibility, we researched the page structure concepts in the suggested 
-        resources from <a href="https://www.w3.org/WAI/tutorials/page-structure/">w3.org</a>. Since clearly listing the food allergens is a requirement, we read the 
-        <a href="https://www.food.gov.uk/business-guidance/allergen-guidance-for-food-businesses">allergen guidance</a> for food businesses from the UK government. We also visited certain websites 
+        &lrm;To ensure universal accessibility, we researched the page structure concepts in the suggested 
+        resources from w3.org (<a href="https://www.w3.org/WAI/tutorials/page-structure/">Web Accessibility Initiative, 2019</a>). Since clearly listing the food allergens is a requirement, we read the 
+        allergen guidance (<a href="https://www.food.gov.uk/business-guidance/allergen-guidance-for-food-businesses">Food Standards Agency, 2020</a>) for food businesses from the UK government. We also visited certain websites 
         which we consider well designed in terms of accessibility, such as <a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a>, then used 
         ‘inspect element’ to understand the way their website elements are constructed. 
-        We also found <a href="https://www.w3.org/WAI/fundamentals/accessibility-principles/">accessibility principles from w3</a>, and designed accordingly as far as we could. 
+        We also found accessibility principles from w3(<a href="https://www.w3.org/WAI/fundamentals/accessibility-principles/">Web Accessibility Initiative, 2021</a>), and designed accordingly as far as we could. 
         Our focus is primarily ensuring full keyboard access to the website, since the users we have in 
         mind really are everybody, and we figure accounting for those who use assistive technologies 
         such as screen readers will make the biggest difference regarding accessibility. Throughout the 
@@ -39,9 +49,43 @@
         accessibility is the ability to easily navigate the site using a keyboard only. 
         The user segment we had in mind includes those who have medical conditions that prevent them 
         from using the mouse. Therefore, we made sure to include a keyboard focus in every flexbox at 
-        all times, and tested to ensure there were no keyboard navigation traps and efficient keyboard 
-        access.(...)
+        all times, and tested to ensure there were no keyboard navigation traps and checking efficient keyboard 
+        access.
       </p>
+      <p>
+        &lrm;Submitting our first draft to AChecker gave us only potential errors aside from missing 
+        <code>alt</code> attributes on our menu photos, which we naturally added. The alt description of <code>facade.jpg</code> 
+        was not descriptive enough, so we rewrote it to include the text in the image. As suggested, we 
+        lengthened the figcaption. To identify the text direction, we used the <code>dir</code> attribute of the <code>html</code> 
+        element, and added the unicode marker <code>&#38;lrm&#59;</code> to each piece of text content. We were advised to 
+        add “skip to content” links, and our solution was adding an additional navigation bar in <code>menu.html</code>, 
+        which contains nested unordered lists. The dish names whose purpose was to facilitate keyboard 
+        navigation were changed to skip to their corresponding course section when clicked. To account for 
+        narrower device screens, we used a media query to disable <code>display&#58; flex</code> and display the menu map and 
+        footer content as regular lists. We changed the “PETUNIA” link in the navigation bar to a more 
+        descriptive “HOME”. We had used uppercase letters for the restaurant title in <code>index.html</code>, and 
+        since best practices suggest solely using CSS for formatting, we instead added a CSS rule to text 
+        transform all <code>h1</code> elements to uppercase. We added a top right toggle button for the user to 
+        view a dark mode version of our site. Finally, we took the opportunity to add a subtle thematically 
+        appropriate floral background and a corresponding one for dark mode, to make the site more aesthetically pleasing.
+      </p>
+      
+      <p><a href="achecker.html">AChecker suggested changes to first draft and our solutions</a></p>
+      <hr>
+      <h2>References</h2>
+      <ul>
+        <li>Food Standards Agency, 2020, <a href="https://www.food.gov.uk/business-guidance/allergen-guidance-for-food-businesses">Allergen guidance for food businesses</a>, food.gov.uk</li>
+        <li>Web Accessibility Initiative, 2021, <a href="https://www.w3.org/WAI/fundamentals/accessibility-principles/">Accessibility Principles</a>, w3.org</li>
+        <li>Web Accessibility Initiative, 2019, <a href="https://www.w3.org/WAI/tutorials/page-structure/">Page Structure Concepts</a>, w3.org</li>
+      </ul>
+      <hr>
+      <h2>DATA1200-1 21H - Group 90 Participants</h2>
+      <ul>
+        <li>s360745 - Dahlstrøm, Thor-Kristian</li>
+        <li>s364549 - Dinh, Daniel Trung</li>
+        <li>s364532 - Kristiansen, Thomas Naper</li>  
+      </ul>
+      <hr>
       </div>
         <footer id="footer">
           <ul class="nav">

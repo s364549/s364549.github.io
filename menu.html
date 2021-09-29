@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark");
+    }
+</script>
   
 </head>
 
-
-
 <body>
   <header id="header">
+    <div class="mode">        
+      <button class="change" onclick="myFunction()">Toggle darkmode</button>
+  </div>
     <nav>
       <ul class="nav">
-        <li><a href="index.html">Petunia</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="menu.html">Menu</a> </li>
         <li><a href="aboutus.html">About us</a></li>
       </ul>
@@ -23,15 +30,40 @@
   </header>
 
   <h1>Menu</h1>
+
+  <div class="coursemap" id="menumap">
+    <ul class="nav">
+      <li><a href="#appetizer">Appetizer</a>
+        <ul>
+          <li><a href="#tunasalad">Tuna Salad</a></li>
+          <li><a href="#grilledcheese">Grilled Cheese Sandwich</a></li>
+        </ul>
+      </li>
+      <li><a href="#main">Main course</a>
+        <ul>
+          <li><a href="#veganschnitzel">Vegan Schnitzel</a></li>
+          <li><a href="#salmonfilet">Salmon Filet</a></li>
+          <li><a href="#pizza">Pizza Margherita</a></li>
+        </ul>
+      </li>
+      <li><a href="#dessert">Dessert</a>
+        <ul>
+          <li><a href="#icecream">Homemade Ice Cream</a></li>
+          <li><a href="#chocolatefondant">Chocolate Fondant</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
   <div class="menu" id="menu">
     <h2>Appetizer</h2>
 
       <div class="course" id="appetizer">
         <div class="dish" id="tunasalad">
-          <img src="images/tunasalad.jpg">
-          <h3><a href="menu.html">Tuna Salad</a></h3>
+          <img src="images/tunasalad.jpg" alt="Tuna on lettuce, cucumber, tomato and black olives">
+          <h3><a href="#appetizer">Tuna Salad</a></h3>
           <p>
-            Pickles and scallions with succulent longfin tuna and fresh lemon juice, dijon mayo, 
+            &lrm;Pickles and scallions with succulent longfin tuna and fresh lemon juice, dijon mayo, 
             and a drizzle of olive oil.
           </p>
           
@@ -43,10 +75,10 @@
         </div>
 
         <div class="dish" id="grilledcheese">
-          <img src="images/gcheese.jpg">
-          <h3><a href="menu.html">Grilled Cheese Sandwich</a></h3>
+          <img src="images/gcheese.jpg" alt="Grilled cheese sandwiched stacked">
+          <h3><a href="#appetizer">Grilled Cheese Sandwich</a></h3>
           <p>
-            Crispy slice of sourdough bread with rich cheddar and gruyère.
+            &lrm;Crispy slice of sourdough bread with rich cheddar and gruyère.
           </p>
           
           <h4>Allergens</h4>
@@ -64,10 +96,10 @@
     <div class="course" id="main">
 
         <div class="dish" id="veganschnitzel">
-          <img src="images/schnitzel.jpg">
-          <h3><a href="menu.html">Vegan Schnitzel</a></h3>
+          <img src="images/schnitzel.jpg" alt="Vegan schnitzel with a few capers on top">
+          <h3><a href="#main">Vegan Schnitzel</a></h3>
           <p>
-            Tender soy and celery root based schnitzel, covered with chickpea flour. 
+            &lrm;Tender soy and celery root based schnitzel, covered with chickpea flour. 
             Served with capers and potato salad.
           </p>
           
@@ -79,10 +111,10 @@
         </div>
 
         <div class="dish" id="salmonfilet">
-          <img src="images/laks.jpg">
-          <h3><a href="menu.html">Salmon Filet</a></h3>
+          <img src="images/laks.jpg" alt="Salmon garnished with fish eggs plated beside golden rice pilaf">
+          <h3><a href="#main">Salmon Filet</a></h3>
           <p>
-            Golden fried salmon served with rice pilaf with caramelized onion, orange and cherry.
+            &lrm;Golden fried salmon served with rice pilaf with caramelized onion, orange and cherry.
           </p>
           
           <h4>Allergens</h4>
@@ -92,10 +124,10 @@
         </div>
 
         <div class="dish" id="pizza">
-          <img src="images/pizza.jpg">
-          <h3><a href="menu.html">Pizza Margherita</a></h3>
+          <img src="images/pizza.jpg" alt="Pizza topped with basil leaves">
+          <h3><a href="#main">Pizza Margherita</a></h3>
           <p>
-            Golden fried salmon served with rice pilaf with caramelized onion, orange and cherry.
+            &lrm;Classic with San Marzano tomatoes, mozzarella, fresh basil, and extra-virgin olive oil.
           </p>
           
           <h4>Allergens</h4>
@@ -112,10 +144,10 @@
       <div class="course" id="dessert">
 
         <div class="dish" id="icecream">
-          <img src="images/icecream.jpg">
-          <h3><a href="menu.html">Homemade Ice Cream</a></h3>
+          <img src="images/icecream.jpg" alt="One white ice cream scoop on top of a wedge of cantaloupe">
+          <h3><a href="#dessert">Homemade Ice Cream</a></h3>
           <p>
-            Light mascarpone flavoured ice cream, with chocolate sauce. 
+            &lrm;Light mascarpone flavoured ice cream, with chocolate sauce. 
             Served with honeydew melon and cantaloupe.
           </p>
           
@@ -127,10 +159,10 @@
         </div>
 
         <div class="dish" id="chocolatefondant">
-          <img src="images/fondant.jpg">
-          <h3><a href="menu.html">Chocolate Fondant</a></h3>
+          <img src="images/fondant.jpg" alt="Portion sized chocolate cake cut open to reveal its oozing center">
+          <h3><a href="#dessert">Chocolate Fondant</a></h3>
           <p>
-            Decadent, French molten chocolate cake. Served with either vanilla ice cream or orange sorbet.
+            &lrm;Decadent, French molten chocolate cake. Served with either vanilla ice cream or orange sorbet.
           </p>
           
           <h4>Allergens</h4>
