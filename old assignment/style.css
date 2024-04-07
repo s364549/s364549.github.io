@@ -1,0 +1,244 @@
+/* Sans-serif typefaces for whole website and fallback typefaces*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('images/linedraw.png');
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size:contain;
+}
+
+/*Improves readability*/
+p {
+  line-height: 2em;
+  word-spacing: 0.1em;
+  margin:25px;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+/*Adds border around pictures*/
+img {
+  border: 4px black solid;
+  max-width: 100%;
+}
+
+/*Horizontal navbar at the top*/
+#header {
+  background-color: rgb(37, 37, 37);
+  color: white;
+  font-size: 1.5em;
+}
+
+#header a {
+  color: white;
+}
+
+#header li{
+  line-height: 180%;
+  list-style-type: none;
+}
+
+/*Horizontal bar at the bottom*/
+#footer {
+  background-color: rgb(75, 75, 75);
+  color: white;
+  font-size: 1em;
+}
+
+#footer li{
+  line-height: 180%;
+}
+
+#menumap {
+  background-color: rgb(75, 75, 75);
+  color:white;
+}
+
+#menumap a {
+  color:white;
+}
+
+#menumap > ul > li > a {
+  color:rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-size:larger;
+}
+
+#menumap li {
+  line-height: 180%;
+  list-style-type: none;
+}
+
+.front {
+  margin: 0px auto;
+  max-width: fit-content;
+}
+
+.front > figure > figcaption {
+  text-align: center;
+}
+
+.dish {
+  box-shadow: 7px 7px 10px 3px darkgrey;
+}
+
+/*Each description is its own flexbox with its items stacked vertically*/
+.dish {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  margin: 25px;
+}
+
+.dish > * {
+  flex: 1;
+}
+
+/*aligns pictures at the flexbox center*/
+.dish > img {
+  margin: 25px;
+  align-self:center;
+  max-width: 100%;
+}
+
+/*Lists allergens side by side*/
+.dish > ul > li {
+  display: inline-block;
+}
+
+/*Sets first letter of each ellergen to bold*/
+.dish > ul > li::first-letter {
+  font-weight: bold;
+}
+
+/*Adds borders to appetizers*/
+#appetizer div {
+  border: 4px rgb(0, 145, 46) solid;
+}
+
+/*Adds borders to main courses*/
+#main div {
+  border: 8px rgb(177, 0, 0) solid;
+}
+
+#dessert div {
+  border: 4px rgb(0, 71, 177) solid;
+}
+
+.info {
+  margin: 25px;
+}
+
+.info li{
+  line-height: 180%;
+}
+
+#infotext > p {
+  text-indent: 2rem;
+}
+
+#acheckertext > ul{
+  color:#a50707;
+  font-size: large;
+  font-weight:bold;
+}
+#acheckertext > ul > li > *{
+  color:#000000;
+}
+/* Shows content in one column on mobile devices */
+@media(min-width: 800px) {
+
+  .course {
+    display:flex;
+    justify-content:center;
+  }
+
+  .dish {
+    flex: 1;
+  }
+
+  #header ul {
+    display: inline-block;
+    display: flex;
+  }
+  
+  #header ul > li {
+    display: inline-block;
+    margin: 25px;
+    text-transform: uppercase;
+  }
+
+  #menumap {
+    font-size: 1em;
+    display: flex;
+  }
+  
+  #menumap li {
+    display: inline-block;
+    margin: 25px;
+  }
+  
+  #menumap > ul {
+    display: flex;
+  }
+  
+  #menumap > ul ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #footer a {
+    color: inherit;
+  }
+  
+  #footer ul {
+    display: inline-block;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  #footer ul > li {
+    display: inline-block;
+    margin: 25px;
+  }
+
+}
+
+.info {
+  box-shadow: 7px 7px 10px 3px darkgrey;
+}
+
+.mode {
+  float:right;
+  color: white;
+  padding: 10px ;
+  margin: 10px 25px;
+}
+
+.dark{
+  background-image: url('images/linedrawdark.png');
+  background-color: #222;
+  color: #e6e6e6;
+}
+
+.dark a {
+  color:rgb(182, 193, 255);
+}
+
+.dark .dish {
+  box-shadow: 7px 7px 10px 3px rgb(0, 0, 0);
+}
+
+.dark .info {
+  box-shadow: 7px 7px 10px 3px rgb(0, 0, 0);
+}
+
+.dark #acheckertext > ul > li > *{
+  color:#ffffff;
+}

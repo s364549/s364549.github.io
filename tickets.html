@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Tickets</title>
+    <script src="nav.js" defer></script>
+  </head>
+  <header id="navbar" class="primary-header flex sticky">
+    <div></div>
+    <div class="text-logo logo">
+      <a href="index.html"><img src="images/007logo.svg"></a>
+      <h1>Museum</h1>
+    </div>
+    
+
+    <button aria-controls="primary-navigation" 
+    aria-expanded="false" class="mobile-nav-toggle">
+      <span 
+        class="sr-only">Menu</span>
+    </button>
+
+    <nav>
+      <ul data-visible="false" id="primary-navigation" class="primary-navigation flex">
+        <li class="nav-link"><a href="tickets.html">Tickets</a></li>
+        <li class="nav-link"><a href="contact.html">Contact</a></li>
+        <li class="nav-link"><a href="merch.html">Merch</a></li>
+        <li class="nav-link"><a href="news.html">News</a></li>
+        <li class="nav-link"><a href="props.html">Props</a></li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <div class="container tickets-title">
+      <h3>Tickets</h3>
+      <img class="symbol" src="images/ticket.svg" alt="Ticket symbol">
+      <p>Purchased at reception</p>
+      
+      <div class="container flex currency">
+        <img src="images/sweden.svg" alt="Flag of Sweden.">
+        <p>SEK</p>
+      </div>
+    </div>
+
+    <div class="container flex customers">
+      <div class="customer">
+        <img src="images/adult.svg" alt="Adult">
+        <p>Adult, 15+</p>
+        <h2>250:-</h2>
+      </div>
+      <div class="customer">
+        <img src="images/child.svg" alt="Child">
+        <p>Child, 5-15</p>
+        <h2>200:-</h2>
+      </div>
+      <div class="customer">
+        <img src="images/baby.svg" alt="Baby">
+        <p>Child, 0-4</p>
+        <h2>Free</h2>
+      </div>
+    </div>
+    
+  </body>
+</html>

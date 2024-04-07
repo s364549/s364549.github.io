@@ -1,51 +1,69 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="stylesheet" href="style.css">
-  <script>
-    function myFunction() {
-    var element = document.body;
-    element.classList.toggle("dark");
-    }
-</script>
-</head>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>007museum.com</title>
+    <script src="nav.js" defer></script>
+  </head>
+  <header class="primary-header flex sticky">
+    <div></div>
+    <div class="text-logo logo">
+      <a href="index.html"><img src="images/007logo.svg"></a>
+      <h1>Museum</h1>
+    </div>
+    
 
+    <button aria-controls="primary-navigation" 
+    aria-expanded="false" class="mobile-nav-toggle">
+      <span 
+        class="sr-only">Menu</span>
+    </button>
 
-<body>
-  <header id="header">
-    <div class="mode">        
-      <button class="change" onclick="myFunction()">Toggle darkmode</button>
-  </div>
     <nav>
-      <ul class="nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a> </li>
-        <li><a href="aboutus.html">About us</a></li>
+      <ul data-visible="false" id="primary-navigation" class="primary-navigation flex">
+        <li class="nav-link"><a href="tickets.html">Tickets</a></li>
+        <li class="nav-link"><a href="contact.html">Contact</a></li>
+        <li class="nav-link"><a href="merch.html">Merch</a></li>
+        <li class="nav-link"><a href="news.html">News</a></li>
+        <li class="nav-link"><a href="props.html">Props</a></li>
       </ul>
     </nav>
   </header>
+  <body>
+    <div class="container">
+      <img class="blood_banner center"src="images/blood_banner.svg" alt="Blood drip from gunbarrel sequence.">
+      <img class="gunbarrel center" src="images/gunbarrel.svg" alt="Bond shooting through a gunbarrel, towards you.">
+      <h2 class="call-to-action"><a href="">Sign up for our newsletter here</a></h2>
+    </div>
 
-  
-  <div class="front" id="facade">
-    <h1>Restaurant Petunia</h1>
-    <figure>
-      <img src="images/facade.jpg" alt="restaurant petunia facade" />
-      <figcaption> &lrm; Depicted is Restaurant Petunia's wooden facade with its tall, outward-facing retractable glass walls wide open.</figcaption>
-    </figure>
-  </div>
+    <div id="come-see" class="container flex">
+      <img class="arrow" src="images/down.svg" alt="Arrow pointing down.">
+      <h2>Come see Bond's cars</h2>
+      <img class="arrow" src="images/down.svg" alt="Arrow pointing down.">
+    </div>
 
-  <footer id="footer">
-    <ul class="nav">
-      <li>Weekdays 16-22 (18-24)</li>
-      <li>Sunday closed</li>
-      <li>Tullegata 60, 9553 OSLO</li>
-      <li>Telefon: 33503150</li>
-      <li>Mail: <a href="mailto:petunia@example.com">petunia@example.com</a></li>
-    </ul>
-  </footer>
-</body>
+    <div class="container description flex">
+      <img class="car-image" src="images/bmwz3.jpg" alt="BMW Z3, the car from Goldeneye, next to the owner of the museum.">
+      <div>
+        <p>Bond has been given various 
+          vehicles to battle his enemies with throughout the James Bond film series. 
+        </p>
+        <h2>
+          <a id="have-a-look" href="props.html">See our collection here</a>
+        </h2>
+      </div>
+      
+    </div>
+
+    <div class="container map flex">
+      <div class="address">
+        <h2>Location</h2>
+        <p>Emmabodavägen 10</p>
+        <p>382 45 Nybro, Sweden</p>
+      </div>
+      <img src="images/map_adr_above.svg" alt="A map marking the location of Nybro James Bond Museum">
+    </div>
+    
+
+  </body>
 </html>
