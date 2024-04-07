@@ -7,7 +7,7 @@
   --red-1000: rgb(76,7,7);
   --blue-900: rgb(18,28,36);
 
-  --font-size-100: clamp(0.68rem, 5vw, 1.5rem);
+  --font-size-100: clamp(0.68rem, 5vw, 1.2rem);
   --font-size-200: clamp(1.5rem, 5vw, 3rem);
   --font-size-300: clamp(3rem, 10vw, 6rem);
 
@@ -319,6 +319,38 @@ h3 {
 
 .product-card img {
   height: clamp(200px, 25vw, 300px); 
+  display: block;
+  margin: auto;
+}
+
+/* News */
+
+.news-article {
+  background-color: var(--blue-900);
+  margin: 3rem 0 0;
+  padding: 5vw;
+}
+
+.date-headline {
+  justify-content: left;
+  align-items: center;
+}
+
+.calendar {
+  height: clamp(50px, 15vw, 100px);
+}
+
+iframe {
+  width: 85vw;
+}
+
+.news-article p {
+  padding: 1rem 0;
+  font-size: var(--font-size-100);
+}
+
+.news-article > img {
+  width: 80vw;
 }
 
 @media (max-width: 50em) {
