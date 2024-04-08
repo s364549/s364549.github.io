@@ -110,6 +110,7 @@ h3 {
 .mobile-nav-toggle{
   position: absolute;
   display: block;
+  cursor: pointer;
   z-index: 1000;
   background-color: transparent;
   background: url("images/hamburger.svg");
@@ -187,23 +188,21 @@ h3 {
 
 @keyframes float {
   0% {
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     transform: translatey(-5px);
   }
   50% {
-    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
     transform: translatey(5px);
   }
   100% {
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     transform: translatey(-5px);
   }
 }
 
 .description {
-  margin: 0 2rem;
+  margin: 2rem;
   padding: 3rem;
-  background-color: var(--background);
+  background: var(--background);
+  border-radius: 20px;
 
   flex-direction: column;
 }
@@ -219,7 +218,7 @@ h3 {
 
 .description p {
   margin: 3rem 0;
-  font-size: var(--font-size-200)
+  font-size: var(--font-size-300)
 }
 
 .see-btn {
@@ -230,15 +229,23 @@ h3 {
 
 .map {
   margin: 2rem;
+  padding: 3rem;
+  border-radius: 20px;
+  background: var(--background);
+
+  flex-direction: column;
+}
+
+.map-image {
+  border-radius: 20px;
 }
 
 .address {
   position: absolute;
   font-size: var(--font-size-300);
-  top: 5rem;
+  top: 3rem;
   left: 5rem;
 }
-
 
 .title {
   flex-direction: column;
@@ -363,6 +370,7 @@ h3 {
 
 .news-article p {
   margin: 2rem 0;
+  font-size: var(--font-size-300);
 }
 
 .date-headline {
@@ -426,6 +434,23 @@ iframe {
   padding: 0;
 }
 
+/* Newsletter */
+
+.form-container {
+  margin: 5rem;
+}
+
+input {
+  width: 100%;
+  margin: 8px 0;
+  font-size: var(--font-size-300);
+}
+
+#errorMsg {
+  color: red;
+  font-size: var(--font-size-500);
+}
+
 @supports (backdrop-filter: blur(1rem)){
   .primary-navigation {
     background: var(--red-1000);
@@ -439,4 +464,20 @@ iframe {
 
 .mobile-nav-toggle[aria-expanded="true"] {
   background: url("images/close.svg");
+}
+
+.hidden {
+  display: none;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 50;
 }

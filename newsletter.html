@@ -1,10 +1,10 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
-    <title>Merch</title>
+    <title>Newsletter</title>
     <script src="nav.js" defer></script>
   </head>
-  <header class="primary-header flex sticky">
+  <header id="navbar" class="primary-header flex sticky">
     <div></div>
     <div class="logo">
       <a href="index.html">
@@ -12,6 +12,7 @@
         <h1>Museum</h1>
       </a>
     </div>
+    
 
     <button aria-controls="primary-navigation" 
     aria-expanded="false" class="mobile-nav-toggle">
@@ -33,42 +34,23 @@
     <div class="primary-container">
       <div id="overlay" class="hidden"></div>
       <div class="container title flex">
-        <h3>Merch</h3>
-        <img class="symbol" src="images/shirt.svg" alt="Shirt">
-        <p>Available at our gift shop</p>
-
-        <div class="container flex currency">
-          <img src="images/sweden.svg" alt="Flag of Sweden.">
-          <p>SEK</p>
-        </div>
+        <h3>Newsletter</h3>
+        <img class="symbol" src="images/mail.svg" alt="Speech bubble.">
       </div>
 
-      <div class="assortment flex">
-        <div class="product-card flex">
-          <img src="images/NoTimeMug.jpg" alt="">
-          <h2>007 mug</h2>
-          <p>120:-</p>
-        </div>
-
-        <div class="product-card flex">
-          <img src="images/NoTimePoster.jpg" alt="">
-          <h2>007 poster</h2>
-          <p>200:-</p>
-        </div>
-
-        <div class="product-card flex">
-          <img src="images/007shirt.jpg" alt="">
-          <h2>007 shirt</h2>
-          <p>180:-</p>
-        </div>
-
-        <div class="product-card flex">
-          <img src="images/seamaster007.png" alt="">
-          <h2>007 SEAMASTER</h2>
-          <p>136 000:-</p>
-        </div>
+      <div class="description">
+        <p>Receive exciting, breaking news about our museum and the James Bond series.</p> 
       </div>
+
+      <div class="form-container">
+        <form name="myForm" action="/" method="GET" onsubmit="return validateForm()">
+          <h2>Enter email</h2>
+          <input id="email" name="email" type="text" placeholder="sample@email.com">
+        </form>
+        <p id="errorMsg" hidden></p>
+        <input type="submit" value="Sign up!">
+      </div>
+
     </div>
-    
   </body>
 </html>
