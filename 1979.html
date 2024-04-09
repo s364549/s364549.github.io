@@ -1,19 +1,19 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
-    <title>Newsletter</title>
+    <title>Venice Gondola</title>
     <script src="nav.js" defer></script>
-    <script src="newsletter.js" defer></script>
   </head>
-  <header id="navbar" class="primary-header flex sticky">
-    <div></div>
+  <header class="primary-header flex sticky">
+    <a href="props.html">
+      <img class="back" src="images/back.svg" alt="Back arrow">
+    </a>
     <div class="logo">
       <a href="index.html">
         <img src="images/007logo.svg">
         <h1>Museum</h1>
       </a>
     </div>
-    
 
     <button aria-controls="primary-navigation" 
     aria-expanded="false" class="mobile-nav-toggle">
@@ -32,27 +32,27 @@
     </nav>
   </header>
   <body>
+    <div id="overlay" class="hidden"></div>
     <div class="primary-container">
-      <div id="overlay" class="hidden"></div>
-      <div class="container title flex">
-        <h3>Newsletter</h3>
-        <img class="symbol" src="images/mail.svg" alt="Speech bubble.">
+      <div class="breadcrumbs">
+        <p><a class="crumb-link" href="props.html">Props</a> > Moonraker (1979)</p>
       </div>
 
-      <div class="description">
-        <img src="images/007_letter.jpg" alt="Bond receiving a letter in Casi­no Royale.">
-        <p>
-          Join our secret newsletter-club and receive exciting, 
-          breaking news about our museum and the James Bond series.
-        </p> 
-      </div>
-
-      <div class="form-container">
-        <form>
-          <h2>Enter email</h2>
-          <input id="email" name="email" type="text" placeholder="sample@email.com" required>
-          <input id="submit" type="submit" value="Sign up">
-        </form>
+      <div class="news-column">
+        <div class="news-article">
+          <div class="date-headline flex">
+            <h3>Venice Gondola</h3>
+          </div>
+          <img class="vehicle-img" src="images/Venice_Gondola_1.jpg" alt="BMW Z3 Roadster">
+          <p>
+            A traditional Venetian rowing boat, 
+            outfitted with a convertible hovercraft. 
+            Bond rows along the canals when an assassin 
+            emerges from a nearby funeral barge and kills 
+            the gondolier. 
+          </p>
+          <img class="vehicle-img" src="images/Venice_Gondola_2.jpg" alt="BMW Z3 Roadster">
+        </div>
       </div>
     </div>
   </body>
