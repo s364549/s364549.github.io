@@ -155,6 +155,61 @@ h3 {
   border-radius: 20px;
 }
 
+.map {
+  margin: 2rem;
+  padding: 3rem;
+  border-radius: 20px;
+  background: var(--background);
+
+  flex-direction: column;
+}
+
+.address {
+  position: absolute;
+  font-size: var(--font-size-300);
+  top: 3rem;
+  left: 5rem;
+}
+
+.title {
+  flex-direction: column;
+  align-items: center;
+}
+
+.symbol {
+  width: clamp(50px, 30%, 150px);
+  max-height: 100px;
+}
+
+.title p {
+  padding: 2rem;
+  font-size: var(--font-size-300);
+}
+
+/* Tickets */
+
+.currency {
+  align-items: center;
+}
+
+.currency img {
+  width: 5rem;
+}
+
+.customers {
+  padding: 0;
+  align-items: end;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.customer {
+  flex-direction: column;
+  align-items: center;
+
+  padding: 2rem;
+}
+
 @media only screen and (max-width: 70em) {
 
   .primary-header{
@@ -177,6 +232,11 @@ h3 {
     width: 4rem;
     right: 3rem;
     top: 4rem;
+  }
+
+  .flex-dt {
+    display: flex;
+    flex-direction: row;
   }
 
   .logo {
@@ -250,44 +310,7 @@ h3 {
     left: 5rem;
   }
 
-  .title {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .symbol {
-    width: clamp(50px, 30%, 150px);
-    max-height: 100px;
-  }
-
-  .title p {
-    padding: 2rem;
-    font-size: var(--font-size-300);
-  }
-
   /* Tickets */
-
-  .currency {
-    align-items: center;
-  }
-
-  .currency img {
-    width: 5rem;
-  }
-
-  .customers {
-    padding: 0;
-    align-items: end;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .customer {
-    flex-direction: column;
-    align-items: center;
-
-    padding: 2rem;
-  }
 
   .customer img {
     width: clamp(100px, 40%, 200px);
@@ -515,6 +538,10 @@ h3 {
     font-size: var(--font-size-200);
   }
 
+  h3 {
+    font-size: var(--font-size-300);
+  }
+
   p {
     font-size: var(--font-size-100);
   }
@@ -569,6 +596,7 @@ h3 {
 
   .description {
     flex-direction: row;
+    align-items: center;
   }
 
   .description img {
@@ -578,11 +606,43 @@ h3 {
   
   .description p {
     margin: 1rem;
-    font-size: var(--font-size-100);
+    font-size: var(--font-size-200);
   }
 
   .see-btn {
     margin: 1rem;
+  }
+
+  .address p{
+    font-size: var(--font-size-200);
+  }
+
+  .symbol {
+    width: clamp(50px, 15%, 80px);
+    max-height: 100px;
+  }
+
+  .title p {
+    padding: 1rem;
+    font-size: var(--font-size-100);
+  }
+
+  .currency img {
+    width: 2rem;
+  }
+
+  /* Tickets */
+
+  .customers {
+    justify-content: center;
+  }
+
+  .customer {
+    padding: 0;
+  }
+
+  .customer img {
+    width: clamp(20px, 20%, 80px);
   }
 
 }

@@ -33,7 +33,7 @@
   </header>
 
   <body>
-    <div class="primary-container">
+    <div id="primary-container-index" class="primary-container">
       <div id="overlay" class="hidden"></div>
       <div class="container">
         <h2 class="call-to-action"><a href="newsletter.html">Sign up for our newsletter here</a></h2>
@@ -71,7 +71,10 @@
           <p>382 45 Nybro</p>
           <p>Sweden</p>
         </div>
-        <img class="map-image" src="images/map_adr_above.svg" alt="A map marking the location of Nybro James Bond Museum">
+        <picture class="map-image">
+          <source srcset="images/map-dt.svg" media="(min-width: 70em)"/>
+          <img src="images/map_adr_above.svg" alt="A map marking the location of Nybro James Bond Museum">
+        </picture>
         <div class="see-btn">
           <h1>
             <a href="tickets.html">See our prices here</a>
