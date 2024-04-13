@@ -139,7 +139,6 @@ h3 {
 
 .description img {
   align-self: center;
-  width: 40%;
   border: 10px var(--gray-50) solid;
   border-radius: 20px;
 }
@@ -372,6 +371,13 @@ iframe {
   border-radius: 20px;
 }
 
+.best-seller {
+  position: absolute;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  background-color: var(--red-1000);
+}
+
 @media only screen and (max-width: 70em) {
 
   .primary-header{
@@ -426,7 +432,7 @@ iframe {
     padding: 5rem;
     font-size: var(--font-size-500);
     border-radius: 4px;
-    transition: 0.3s;
+    transition: 0.5s ease-out;
   }
 
   .primary-container {
@@ -650,6 +656,7 @@ iframe {
   .description img {
     border-width: 3px;
     border-radius: 20px;
+    width: 35%;
   }
   
   .description p {
@@ -801,3 +808,76 @@ iframe {
   }
   
 }
+
+/* Title animation */
+
+.first-logo, .title h3 {
+  animation: fall-fade 1s ease-out;
+}
+
+.call-to-action {
+  animation: fall-fade-late 2s ease-out;
+}
+
+.title img {
+  animation: fade-late 1.8s ease-out;
+}
+
+.title p {
+  animation: fade-late 2s ease-out;
+}
+
+@keyframes fall-fade {
+  0% {
+      opacity: 0;
+      transform: translateY(-40px);
+  }
+
+  70% {
+    opacity: 1;
+    transform : translateY(2px);
+  }
+
+  100% {
+      opacity: 1;
+      transform : translateY(0);
+  }
+}
+
+@keyframes fall-fade-late {
+  0% {
+      opacity: 0;
+      transform: translateY(-40px);
+  }
+
+  40% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  80% {
+    opacity: 1;
+    transform : translateY(2px);
+  }
+
+  100% {
+      opacity: 1;
+      transform : translateY(0);
+  }
+}
+
+@keyframes fade-late {
+  0% {
+      opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+
